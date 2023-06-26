@@ -1,0 +1,17 @@
+pull_request:
+    branches: [master]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        name: Checkout Branch
+        with:
+          token: ${{ secrets.ACTIONS_TOKEN }}
+      # Stores branchname
+      - uses: intellectiveco/github-action-tokenize-branch-name@v1.0.13
+        name: 🤔 Parse Branch Name
