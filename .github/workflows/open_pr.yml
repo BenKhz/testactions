@@ -1,7 +1,8 @@
-pull_request:
-    branches: [master]
+on:
+    pull_request:
+        branches: [master]
 
-  workflow_dispatch:
+    workflow_dispatch:
 
 jobs:
   build:
@@ -15,3 +16,7 @@ jobs:
       # Stores branchname
       - uses: intellectiveco/github-action-tokenize-branch-name@v1.0.13
         name: 🤔 Parse Branch Name
+    
+      - name: LOG Pull request object
+        run: |
+          echo "${{ toJson(github.event) }}"
