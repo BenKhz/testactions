@@ -1,6 +1,6 @@
 on:
     pull_request_target:
-        branches: [master]
+        branches: [main]
         types: ['edited', 'closed']
 
     workflow_dispatch:
