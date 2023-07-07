@@ -15,3 +15,5 @@ jobs:
             
         - name: Use action
           uses: actions/checkout@v2
+          with:
+            token: ${{secrets.ACTION_TOKEN}}
