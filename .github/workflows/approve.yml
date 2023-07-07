@@ -12,3 +12,6 @@ jobs:
         - name: Log Stuff
           run: |
             echo "${{ toJson(github.event.pull_request) }}"
+            
+        - name: Use action
+          uses: actions/checkout@v2
